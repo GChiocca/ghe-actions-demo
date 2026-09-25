@@ -20,7 +20,7 @@ on:
 
 concurrency:
   group: capture-book-compute-prod-${{ github.ref }}
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -43,4 +43,4 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-          sleep 30
+          sleep 20
