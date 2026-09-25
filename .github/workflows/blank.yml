@@ -18,6 +18,10 @@ on:
         type: boolean
         default: true
 
+concurrency:
+  group: capture-book-compute-prod-${{ github.ref }}
+  cancel-in-progress: false
+
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
